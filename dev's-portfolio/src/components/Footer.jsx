@@ -1,5 +1,5 @@
 import React from "react";
-import { Compass, Mail, Github, Linkedin, Eye, Globe } from "lucide-react";
+import { Mail, Github, Linkedin, Globe, Code2 } from "lucide-react";
 import { PORTFOLIO_BIO } from "../data.js";
 
 export default function Footer({ setActiveTab }) {
@@ -20,7 +20,7 @@ export default function Footer({ setActiveTab }) {
             DEV SHARMA
           </span>
           <p className="text-xs text-slate-400 font-sans leading-relaxed max-w-sm">
-            Computer Science student specializing in core data structures, databases, and modern JavaScript web applications. High-performing and detail-oriented.
+            CS student at LNCT Bhopal who actually enjoys building stuff — Java, Spring Boot, and backend APIs. I do hackathons, write cleanish code, and somehow keep a decent CGPA.
           </p>
         </div>
 
@@ -52,31 +52,44 @@ export default function Footer({ setActiveTab }) {
           <span className="font-display font-medium text-xs tracking-widest text-sky-400 block mb-3 uppercase">
             SOCIAL CONNECTOR
           </span>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-2">
             <a 
               href={`mailto:${PORTFOLIO_BIO.email}`} 
               title="Send mail to Dev Sharma"
-              className="p-2 bg-[#0c1017] border border-[#1e293b] rounded-lg text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all"
+              className="flex items-center gap-2 px-3 py-2 bg-[#0c1017] border border-[#1e293b] rounded-lg text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all hover:shadow-[0_0_10px_rgba(56,189,248,0.12)]"
             >
               <Mail className="w-4 h-4" />
+              <span className="text-[11px] font-mono">Email</span>
             </a>
             <a 
               href={PORTFOLIO_BIO.github} 
               target="_blank" 
               rel="noreferrer" 
               title="Github repository external link"
-              className="p-2 bg-[#0c1017] border border-[#1e293b] rounded-lg text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all"
+              className="flex items-center gap-2 px-3 py-2 bg-[#0c1017] border border-[#1e293b] rounded-lg text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all hover:shadow-[0_0_10px_rgba(56,189,248,0.12)]"
             >
               <Github className="w-4 h-4" />
+              <span className="text-[11px] font-mono">GitHub</span>
             </a>
             <a 
               href={PORTFOLIO_BIO.linkedin} 
               target="_blank" 
               rel="noreferrer" 
               title="Linkedin external link"
-              className="p-2 bg-[#0c1017] border border-[#1e293b] rounded-lg text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all"
+              className="flex items-center gap-2 px-3 py-2 bg-[#0c1017] border border-[#1e293b] rounded-lg text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all hover:shadow-[0_0_10px_rgba(56,189,248,0.12)]"
             >
               <Linkedin className="w-4 h-4" />
+              <span className="text-[11px] font-mono">LinkedIn</span>
+            </a>
+            <a 
+              href={PORTFOLIO_BIO.leetcode} 
+              target="_blank" 
+              rel="noreferrer" 
+              title="Leetcode external link"
+              className="flex items-center gap-2 px-3 py-2 bg-[#0c1017] border border-[#1e293b] rounded-lg text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all hover:shadow-[0_0_10px_rgba(56,189,248,0.12)]"
+            >
+              <Code2 className="w-4 h-4" />
+              <span className="text-[11px] font-mono">LeetCode</span>
             </a>
           </div>
           <span className="text-[10px] font-mono text-slate-500 block mt-4">

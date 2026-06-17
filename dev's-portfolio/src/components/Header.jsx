@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, Linkedin, Code2 } from "lucide-react";
+import { PORTFOLIO_BIO } from "../data.js";
 
 export default function Header({ activeTab, setActiveTab }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -69,9 +70,24 @@ export default function Header({ activeTab, setActiveTab }) {
         })}
       </nav>
 
-      {/* Mobile drawer button */}
-      <div className="flex items-center gap-3">
-        {/* Mobile menu grid toggle */}
+      {/* Right side actions */}
+      <div className="flex items-center gap-2">
+        {/* Social icons — desktop only */}
+        <div className="hidden md:flex items-center gap-1.5 pr-2 border-r border-[#1e293b]/60">
+          <a href={PORTFOLIO_BIO.github} target="_blank" rel="noreferrer" title="GitHub"
+            className="p-2 bg-[#0c1017] border border-[#1e293b] rounded-full text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all">
+            <Github className="w-4 h-4" />
+          </a>
+          <a href={PORTFOLIO_BIO.linkedin} target="_blank" rel="noreferrer" title="LinkedIn"
+            className="p-2 bg-[#0c1017] border border-[#1e293b] rounded-full text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all">
+            <Linkedin className="w-4 h-4" />
+          </a>
+          <a href={PORTFOLIO_BIO.leetcode} target="_blank" rel="noreferrer" title="LeetCode"
+            className="p-2 bg-[#0c1017] border border-[#1e293b] rounded-full text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-all">
+            <Code2 className="w-4 h-4" />
+          </a>
+        </div>
+        {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden p-2 bg-[#0c1017] border border-[#1e293b] rounded-full text-slate-400 hover:text-white transition-colors"

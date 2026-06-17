@@ -70,8 +70,8 @@ export default function App() {
               className="flex flex-col gap-16 md:gap-24"
             >
               <HeroSection       onScrollToContact={scrollToContact} />
-              <StatsSection      />
               <EducationSection  />
+              <StatsSection      />
               <BentoSection      onCopyEmail={copyEmailToClipboard} copied={copied} />
               <ExperienceSection />
               <JourneySection    />

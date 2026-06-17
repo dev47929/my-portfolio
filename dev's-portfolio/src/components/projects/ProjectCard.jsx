@@ -175,9 +175,13 @@ export default function ProjectCard({ project, isExpanded, onToggleExpand, onToa
         <div className="pt-4 border-t border-slate-800/50 flex justify-between items-center">
           <button
             onClick={onToggleExpand}
-            className="text-[10.5px] font-mono text-slate-400 hover:text-sky-400 focus:outline-none transition-colors border-b border-dotted border-slate-600/60 hover:border-sky-400"
+            className={`text-[11px] font-mono font-semibold tracking-wide px-3 py-1.5 rounded-lg border transition-all ${
+              isExpanded
+                ? "bg-sky-500/10 border-sky-500/30 text-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.1)]"
+                : "bg-slate-800/60 border-slate-700/60 text-slate-300 hover:bg-slate-700/60 hover:border-sky-500/40 hover:text-sky-400 hover:shadow-[0_0_10px_rgba(56,189,248,0.08)]"
+            }`}
           >
-            {isExpanded ? "[-] Collapse Details" : "[+] Expand Specs & Metrics"}
+            {isExpanded ? "▲ Collapse" : "▼ Expand Specs"}
           </button>
 
           <a
