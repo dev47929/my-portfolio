@@ -1,0 +1,6 @@
+{
+  "name": "Radnaabazar Portfolio",
+  "description": "An interactive, highly polished personal portfolio of Radnaabazar, a Creative Developer and Interactive Designer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
