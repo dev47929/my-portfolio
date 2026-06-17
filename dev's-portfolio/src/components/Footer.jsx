@@ -2,7 +2,7 @@ import React from "react";
 import { Compass, Mail, Github, Linkedin, Eye, Globe } from "lucide-react";
 import { PORTFOLIO_BIO } from "../data.js";
 
-export default function Footer({ setActiveTab, language }) {
+export default function Footer({ setActiveTab }) {
   const year = new Date().getFullYear();
 
   const handleLinkClick = (tab) => {
@@ -20,16 +20,14 @@ export default function Footer({ setActiveTab, language }) {
             DEV SHARMA
           </span>
           <p className="text-xs text-slate-400 font-sans leading-relaxed max-w-sm">
-            {language === "EN" 
-              ? "Computer Science student specializing in core data structures, databases, and modern JavaScript web applications. High-performing and detail-oriented."
-              : "Компьютерийн шинжлэх ухааны чиглэлээр суралцаж буй оюутан бөгөөд өгөгдлийн бүтэц, өгөгдлийн сан, орчин үеийн JavaScript веб системээр дагнасан."}
+            Computer Science student specializing in core data structures, databases, and modern JavaScript web applications. High-performing and detail-oriented.
           </p>
         </div>
 
         {/* Navigation triggers */}
         <div>
           <span className="font-display font-medium text-xs tracking-widest text-sky-400 block mb-3 uppercase">
-            {language === "EN" ? "SITE SECTIONS" : "ХУУДАСНЫ ХЭСГҮҮД"}
+            SITE SECTIONS
           </span>
           <div className="grid grid-cols-2 gap-2.5 text-xs font-mono">
             <button onClick={() => handleLinkClick("professional")} className="text-left text-slate-400 hover:text-sky-400 transition-colors">
@@ -52,7 +50,7 @@ export default function Footer({ setActiveTab, language }) {
         {/* Quick connect details */}
         <div>
           <span className="font-display font-medium text-xs tracking-widest text-sky-400 block mb-3 uppercase">
-            {language === "EN" ? "SOCIAL CONNECTOR" : "ХОЛБООСУУД"}
+            SOCIAL CONNECTOR
           </span>
           <div className="flex gap-3">
             <a 

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ChevronDown, Globe, Menu, X, Check } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-export default function Header({ activeTab, setActiveTab, language, setLanguage }) {
-  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+export default function Header({ activeTab, setActiveTab }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: "professional", labelEN: "Professional", labelMN: "Мэргэжлийн" },
-    { id: "projects", labelEN: "Projects", labelMN: "Төслүүд" },
-    { id: "contact", labelEN: "Contact", labelMN: "Холбоо барих" },
+    { id: "professional", label: "Professional" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
   ];
 
   const handleNavClick = (id) => {
@@ -32,7 +31,7 @@ export default function Header({ activeTab, setActiveTab, language, setLanguage 
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#030508]/85 backdrop-blur-md border-b border-[#1e293b]/50 px-6 sm:px-12 py-4 flex items-center justify-between" id="navigation-header">
+    <header className="sticky top-0 z-50 w-full bg-[#030508]/85 backdrop-blur-md border-b border-[#1e293b]/55 px-6 sm:px-12 py-4 flex items-center justify-between" id="navigation-header">
       {/* Brand logo label */}
       <div 
         onClick={() => handleNavClick("professional")}
@@ -64,64 +63,14 @@ export default function Header({ activeTab, setActiveTab, language, setLanguage 
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
-              {language === "EN" ? item.labelEN : item.labelMN}
+              {item.label}
             </button>
           );
         })}
       </nav>
 
-      {/* Language Toggle switch and mobile drawer buttons */}
+      {/* Mobile drawer button */}
       <div className="flex items-center gap-3">
-        {/* Functional Dropdown Custom Button exactly matching the video's green button! */}
-        <div className="relative">
-          <button
-            onClick={() => setLangDropdownOpen(!langDropdownOpen)}
-            className="flex items-center gap-2 px-4 py-2 bg-sky-500 hover:bg-sky-600 active:scale-95 text-black font-semibold rounded-full text-xs transition-all shadow-lg shadow-sky-500/20"
-          >
-            {/* Round sphere globe or orbit */}
-            <Globe className="w-3.5 h-3.5 shrink-0" />
-            <span>{language === "EN" ? "English" : "Монгол"}</span>
-            <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${langDropdownOpen ? "rotate-180" : ""}`} />
-          </button>
-
-          <AnimatePresence>
-            {langDropdownOpen && (
-              <>
-                {/* Backdrop clear overlay to close */}
-                <div className="fixed inset-0 z-10" onClick={() => setLangDropdownOpen(false)} />
-                <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute right-0 mt-2 w-32 bg-[#0c1017] border border-[#1e293b] rounded-xl overflow-hidden shadow-2xl z-20"
-                >
-                  <button
-                    onClick={() => {
-                      setLanguage("EN");
-                      setLangDropdownOpen(false);
-                    }}
-                    className="w-full px-4 py-2 text-left text-xs font-medium text-slate-300 hover:bg-[#1e293b] hover:text-white flex items-center justify-between"
-                  >
-                    <span>English</span>
-                    {language === "EN" && <Check className="w-3.5 h-3.5 text-sky-400" />}
-                  </button>
-                  <button
-                    onClick={() => {
-                      setLanguage("MN");
-                      setLangDropdownOpen(false);
-                    }}
-                    className="w-full px-4 py-2 text-left text-xs font-medium text-slate-300 hover:bg-[#1e293b] hover:text-white flex items-center justify-between"
-                  >
-                    <span>Монгол</span>
-                    {language === "MN" && <Check className="w-3.5 h-3.5 text-sky-400" />}
-                  </button>
-                </motion.div>
-              </>
-            )}
-          </AnimatePresence>
-        </div>
-
         {/* Mobile menu grid toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -148,7 +97,7 @@ export default function Header({ activeTab, setActiveTab, language, setLanguage 
                   activeTab === item.id ? "text-sky-400" : "text-slate-400"
                 }`}
               >
-                {language === "EN" ? item.labelEN : item.labelMN}
+                {item.label}
               </button>
             ))}
           </motion.div>
