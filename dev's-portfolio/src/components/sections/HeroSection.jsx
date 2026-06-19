@@ -1,7 +1,8 @@
 import React from "react";
 import { Github, Linkedin, Mail, Code2, Sparkles } from "lucide-react";
 import { PORTFOLIO_BIO } from "../../data.js";
-import HeroVisual from "../HeroVisual.jsx";
+import TerminalAvatar from "../TerminalAvatar.jsx";
+import HighlightText from "../ui/HighlightText.jsx";
 
 export default function HeroSection({ onScrollToContact }) {
   return (
@@ -18,18 +19,23 @@ export default function HeroSection({ onScrollToContact }) {
         </div>
 
         {/* Name headline */}
-        <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-white leading-[1.05] tracking-tight">
-          Hello I'm{" "}
-          <span className="block mt-1 font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-200">
-            Dev
-          </span>
-          <span className="block mt-1 text-sky-400 drop-shadow-[0_0_15px_rgba(56,189,248,0.25)]">
-            Sharma
-          </span>
+        <h1 className="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl text-white leading-[1.05] tracking-tight">
+          <span className="block">Hello I'm</span>
+          <HighlightText
+            className="inline font-black text-5xl sm:text-7xl md:text-8xl"
+            highlightColor="#38bdf8"
+            direction="right"
+            duration={0.4}
+            textColor="#e2e8f0"
+            activeTextColor="#0a0a0a"
+            padding="0.05em 0.15em"
+          >
+            Dev Sharma
+          </HighlightText>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-sm md:text-base text-slate-400 font-sans leading-relaxed max-w-xl">
+        <p className="text-base md:text-lg text-slate-400 font-sans leading-relaxed max-w-xl">
           {PORTFOLIO_BIO.subTitle}
         </p>
 
@@ -76,9 +82,9 @@ export default function HeroSection({ onScrollToContact }) {
         </div>
       </div>
 
-      {/* ── Right column: Hero Visual ── */}
-      <div className="lg:col-span-5 flex justify-center items-center py-6 relative" id="hero-right-celestial">
-        <HeroVisual />
+      {/* ── Right column: Terminal Avatar ── */}
+      <div className="lg:col-span-5" id="hero-right-terminal">
+        <TerminalAvatar />
       </div>
     </section>
   );

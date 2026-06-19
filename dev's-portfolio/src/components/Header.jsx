@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, Github, Linkedin, Code2 } from "lucide-react";
 import { PORTFOLIO_BIO } from "../data.js";
+import ScrollProgress from "./ui/ScrollProgress.jsx";
 
 export default function Header({ activeTab, setActiveTab }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function Header({ activeTab, setActiveTab }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#030508]/85 backdrop-blur-md border-b border-[#1e293b]/55 px-6 sm:px-12 py-4 flex items-center justify-between" id="navigation-header">
+    <header className="sticky top-0 z-50 w-full bg-[#030508]/85 backdrop-blur-md border-b border-[#1e293b]/55 px-6 sm:px-12 py-4 flex items-center justify-between relative" id="navigation-header">
       {/* Brand logo label */}
       <div 
         onClick={() => handleNavClick("professional")}
@@ -119,6 +120,8 @@ export default function Header({ activeTab, setActiveTab }) {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <ScrollProgress />
     </header>
   );
 }

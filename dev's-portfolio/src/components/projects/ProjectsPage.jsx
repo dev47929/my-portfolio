@@ -66,12 +66,14 @@ export default function ProjectsPage({ setActiveTab, setToastMessage }) {
 
       {/* ── Project grid ── */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
-        {visibleProjects.map((project) => (
+        {visibleProjects.map((project, index) => (
           <ProjectCard
-            key={project.id}
+            key={project.id ?? index}
             project={project}
-            isExpanded={expandedId === project.id}
-            onToggleExpand={() => setExpandedId(expandedId === project.id ? null : project.id)}
+            isExpanded={expandedId === index}
+            onToggleExpand={() =>
+              setExpandedId(expandedId === index ? null : index)
+            }
             onToast={setToastMessage}
           />
         ))}

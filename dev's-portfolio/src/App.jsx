@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 // Layout
@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 // UI utilities
 import BackgroundDecor    from "./components/ui/BackgroundDecor";
+
 import FloatingTabBar     from "./components/ui/FloatingTabBar";
 import ToastNotification  from "./components/ui/ToastNotification";
 
@@ -48,7 +49,7 @@ export default function App() {
 
   return (
     <div
-      className="min-h-screen flex flex-col bg-[#030508] text-slate-100 bg-grid-pattern relative overflow-x-hidden font-sans"
+      className="min-h-screen flex flex-col bg-[#030508] text-slate-100 bg-grid-pattern relative font-sans"
       id="app-root"
     >
       <BackgroundDecor />
