@@ -9,12 +9,12 @@ export const PORTFOLIO_BIO = {
   github: "https://github.com/dev47929",
   linkedin: "https://www.linkedin.com/in/dev-sharma-868b4525b/",
   leetcode: "https://leetcode.com/dev47929",
-  aboutFull: "I am a Backend-focused software developer and B.Tech Computer Science & Engineering student at LNCT Bhopal (CGPA: 8.81, Latest SGPA: 9.0). I build RESTful APIs, microservices, and full-stack applications using Java, Spring Boot, and PostgreSQL, with experience in JWT-based authentication, Spring Security, and LLM API integration.",
+  aboutFull: "I am a Backend-focused software developer and B.Tech Computer Science & Engineering student at LNCT Bhopal (CGPA: 8.82, Latest SGPA: 9.0). I build RESTful APIs, microservices, and full-stack applications using Java, Spring Boot, and PostgreSQL, with experience in JWT-based authentication, Spring Security, and LLM API integration.",
   philosophy: "Clean architecture, thoughtful API design, and hands-on hackathon experience are the foundation of building reliable, scalable backend systems.",
 };
 
 export const CORE_STATS = [
-  { value: "8.81", label: "Cumulative CGPA" },
+  { value: "8.82", label: "Cumulative CGPA" },
   { value: "9.0",  label: "Latest SGPA" },
   { value: "5+",   label: "Hackathons & Events Led" },
 ];
@@ -22,13 +22,13 @@ export const CORE_STATS = [
 export const EDUCATION_DATA = {
   title: "Bachelor of Technology in Computer Science and Engineering (B.Tech CSE)",
   period: "2024 – 2028",
-  gpa: "8.81 CGPA | 9.0 SGPA (Latest Semester)",
+  gpa: "8.82 CGPA | 9.0 SGPA (Latest Semester)",
   institution: "LNCT Bhopal",
 };
 
 export const BENTO_PROFILE = {
   column1: "Backend-focused developer specializing in Java, Spring Boot & PostgreSQL",
-  column2: "Strong academics: 8.81 CGPA with a 9.0 SGPA in the latest semester at LNCT Bhopal",
+  column2: "Strong academics: 8.82 CGPA with a 9.0 SGPA in the latest semester at LNCT Bhopal",
   column3: "Building production-grade RESTful APIs, microservices, and full-stack applications",
   column4: {
     title: "Core Skills",
@@ -126,7 +126,7 @@ export const EXPERIENCE_CARDS = [
   },
   {
     role: "CS Student & Problem Solver",
-    desc: "B.Tech CSE at LNCT Bhopal (CGPA: 8.81). Strong foundations in Data Structures & Algorithms, OOP, and System Design, with active LeetCode practice.",
+    desc: "B.Tech CSE at LNCT Bhopal (CGPA: 8.82). Strong foundations in Data Structures & Algorithms, OOP, and System Design, with active LeetCode practice.",
     accent: "rose",
   },
 ];
@@ -134,27 +134,50 @@ export const EXPERIENCE_CARDS = [
 export const TIMELINE_JOURNEY = [
   {
     year: "2026",
-    title: "Tech Sageathon — Top 4 / 200+ Teams",
-    desc: "Built InterviewCircle at Tech Sageathon (SIRT Bhopal) — an AI-powered interview prep platform with live coding, speech-to-text mock interviews, and ATS resume analysis. Placed Top 4 among 200+ teams.",
+    title: { EN: "Tech Sageathon — Top 4 / 200+ Teams" },
+    desc: {
+      EN: "Built InterviewCircle at Tech Sageathon (SIRT Bhopal) — an AI-powered interview prep platform with live coding, speech-to-text mock interviews, and ATS resume analysis. Placed Top 4 among 200+ teams.",
+    },
   },
   {
     year: "2026",
-    title: "Feature Flag Service & AI Job Tracker",
-    desc: "Developed two portfolio-grade backend projects: a self-hosted Feature Flag Service with cascading evaluation and JWT auth, and an AI-Powered Job Tracker with Groq LLM integration and resume-job match analysis.",
+    title: { EN: "BGI Hackathon — Top 20 / 1000+ Teams" },
+    desc: {
+      EN: "Led a development team to place Top 20 out of 1000+ teams at the BGI Hackathon, Bhopal — building and pitching a full-stack product within 24 hours.",
+    },
   },
   {
     year: "2025",
-    title: "BGI Hackathon — Top 20 / 600+ Teams",
-    desc: "Led a development team to place Top 20 out of 600+ teams at the BGI Hackathon, Bhopal — building and pitching a full-stack product within 24 hours.",
-  },
-  {
-    year: "2025",
-    title: "National Startup Competition — Top 16 Grand Finalists",
-    desc: "Led a startup pitching team to become Top 16 Grand Finalists out of 100+ teams in a national-level startup competition.",
+    title: { EN: "InnovX Season 2 — Top 16 Grand Finalists" },
+    desc: {
+      EN: "Led a startup pitching team to become Top 16 Grand Finalists in InnovX Season 2, a national-level startup pitching competition with 100+ teams.",
+    },
   },
   {
     year: "2024",
-    title: "Started B.Tech CSE at LNCT Bhopal",
-    desc: "Began Bachelor of Technology in Computer Science & Engineering at LNCT Bhopal. Achieving 8.81 CGPA with a 9.0 SGPA in the latest semester while building backend projects and competing in hackathons.",
+    title: { EN: "Started B.Tech CSE at LNCT Bhopal" },
+    desc: {
+      EN: "Began Bachelor of Technology in Computer Science & Engineering at LNCT Bhopal. Achieving 8.82 CGPA with a 9.0 SGPA in the latest semester while building backend projects and competing in hackathons.",
+    },
   },
+];
+
+export const EDUCATION_CARDS = [
+  {
+    title: "10th Standard",
+    institution: "Billabong High International School - Bhopal",
+    metric: "92%",
+    progress: 92,
+    desc: "Completed secondary education with distinction, securing top grades in core subjects.",
+    accent: "cyan",
+  },
+  {
+    title: "12th Standard",
+    institution: "Sardar Patel Public School, Bhopal",
+    metric: "81%",
+    progress: 81,
+    desc: "Graduated senior secondary in the Science stream with a focus on Physics, Chemistry, and Math.",
+    accent: "purple",
+  },
+
 ];

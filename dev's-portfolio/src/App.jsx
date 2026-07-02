@@ -14,7 +14,7 @@ import ToastNotification  from "./components/ui/ToastNotification";
 // Professional page sections
 import HeroSection        from "./components/sections/HeroSection";
 import StatsSection       from "./components/sections/StatsSection";
-import EducationSection   from "./components/sections/EducationSection";
+
 import BentoSection       from "./components/sections/BentoSection";
 import ExperienceSection  from "./components/sections/ExperienceSection";
 import JourneySection     from "./components/sections/JourneySection";
@@ -71,7 +71,6 @@ export default function App() {
               className="flex flex-col gap-16 md:gap-24"
             >
               <HeroSection       onScrollToContact={scrollToContact} />
-              <EducationSection  />
               <StatsSection      />
               <BentoSection      onCopyEmail={copyEmailToClipboard} copied={copied} />
               <ExperienceSection />
